@@ -14,3 +14,13 @@ for (i = 0; i < temperatures.length; i++) {
   if (temperatures[i] < lowest) lowest = temperatures[i];
 }
 console.log(`Highest: ${highest}°C, Lowest: ${lowest}°C`);
+
+let prices = [1000, 2000, 3000, 4000, 5000];
+let discountRate = 10;
+let discountedPrices = [];
+for (let i = 0; i < prices.length; i++) {
+  let discount = prices[i] * (discountRate / 100);
+  let discountedPrice = prices[i] - discount;
+  discountedPrices.push(discountedPrice);
+}
+console.log(`prices: ${prices}, discountedPrices: ${discountedPrices}`);
