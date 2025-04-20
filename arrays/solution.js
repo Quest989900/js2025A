@@ -70,15 +70,15 @@ console.log( highSpendingTransactions)
 
 
 // QUESTION 6.
-let words = ["apple", "banana", "cherry", "date", "elderberry"]
+let word = ["apple", "banana", "cherry", "date", "elderberry"]
 
 let wordLengths = []
 
-for (let i = 0; i < words.length; i++) {
-    wordLengths.push(words[i].length)
+for (let i = 0; i < word.length; i++) {
+    wordLengths.push(word[i].length)
 }
 
-console.log(words)
+console.log(word)
 console.log(wordLengths)
 
 
@@ -136,4 +136,3 @@ for (let i = 0; i < words.length; i++) {
 }
 
 console.log(vowelCount)
-GIT
