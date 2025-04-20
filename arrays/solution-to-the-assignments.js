@@ -43,3 +43,10 @@ for (let i = 0; i < amounts.length; i++) {
   }
 }
 console.log(`AmountAboveThreshold: ${amountAboveThreshold}`);
+
+let words = ["Zero", "pressure", "you", "feel", "me", "."];
+let wordsLength = [];
+for (let i = 0; i < words.length; i++) {
+  wordsLength.push(words[i].length);
+}
+console.log(`WordsLength: ${wordsLength}`);
