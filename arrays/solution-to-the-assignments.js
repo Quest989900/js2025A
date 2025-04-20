@@ -24,3 +24,12 @@ for (let i = 0; i < prices.length; i++) {
   discountedPrices.push(discountedPrice);
 }
 console.log(`prices: ${prices}, discountedPrices: ${discountedPrices}`);
+
+let ages = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70];
+let minors = 0;
+let adults = 0;
+for (let i = 0; i < ages.length; i++) {
+  if (ages[i] < 18) minors++;
+  else adults++;
+}
+console.log(`Minors: ${minors}, Adults: ${adults}`);
