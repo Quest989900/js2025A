@@ -4,4 +4,13 @@ for (i = 0; i < monthlyExpenses.length; i++) {
   total += monthlyExpenses[i];
 }
 let average = total / monthlyExpenses.length;
-console.log(average);
+console.log(`Total: ${total}, Average: ${average}`);
+
+let temperatures = [5, 10, 15, 20, 25, 30, 35, 40];
+let highest = temperatures[0];
+let lowest = temperatures[0];
+for (i = 0; i < temperatures.length; i++) {
+  if (temperatures[i] > highest) highest = temperatures[i];
+  if (temperatures[i] < lowest) lowest = temperatures[i];
+}
+console.log(`Highest: ${highest}°C, Lowest: ${lowest}°C`);
