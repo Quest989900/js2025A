@@ -33,3 +33,13 @@ for (let i = 0; i < ages.length; i++) {
   else adults++;
 }
 console.log(`Minors: ${minors}, Adults: ${adults}`);
+
+let amounts = [300, 600, 900, 1200, 1500, 1800, 2100, 2400, 2700, 3000];
+let threshold = 1000;
+let amountAboveThreshold = [];
+for (let i = 0; i < amounts.length; i++) {
+  if (amounts[i] > threshold) {
+    amountAboveThreshold.push(amounts[i]);
+  }
+}
+console.log(`AmountAboveThreshold: ${amountAboveThreshold}`);
