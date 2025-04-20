@@ -63,3 +63,12 @@ for (i = 0; i < arrayWord.length / 2; i++) {
   arrayWord[arrayWord.length - 1 - i] = first;
 }
 console.log(`ReversedArrayWord: ${arrayWord}`);
+
+let attendees = ["Prosper", "Ayo", "Toheeb", "Sunny", "Lekan", "Sunny"];
+let uniqueNames = [];
+for (i = 0; i < attendees.length; i++) {
+  if (uniqueNames.indexOf(attendees[i]) === -1) {
+    uniqueNames.push(attendees[i]);
+  }
+}
+console.log(uniqueNames);
