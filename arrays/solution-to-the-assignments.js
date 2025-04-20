@@ -50,3 +50,8 @@ for (let i = 0; i < words.length; i++) {
   wordsLength.push(words[i].length);
 }
 console.log(`WordsLength: ${wordsLength}`);
+
+let shoppingLists = ["Dodge", "Benz", "BMW", "Lambo", "Ferrari", "Tesla"];
+let targetedItems = "Lambo";
+let index = shoppingLists.indexOf(targetedItems);
+console.log(`IndexOfTargetedItem: ${index}`);
