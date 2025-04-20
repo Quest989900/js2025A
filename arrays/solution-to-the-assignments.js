@@ -72,3 +72,14 @@ for (i = 0; i < attendees.length; i++) {
   }
 }
 console.log(uniqueNames);
+
+let sentence = "Your future is at stake, keep grinding hard!!!";
+let word = sentence.split(" ");
+let vowelCount = 0;
+let vowels = "aeiouAEIOU";
+for (i = 0; i < word.length; i++) {
+  if (vowels.includes(word[i].charAt(0))) {
+    vowelCount++;
+  }
+}
+console.log(vowelCount);
