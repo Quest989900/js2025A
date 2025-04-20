@@ -1,0 +1,51 @@
+/*
+1. Monthly Budget Calculator
+Given an array of your monthly expense amounts, 
+use a loop to compute the total expense and then 
+calculate the average.
+
+2.Temperature Analyzer
+With an array of daily temperatures (in °C), 
+find the highest and lowest temperatures by 
+iterating once through the array.
+
+3. Discounted Prices Generator
+Given an array of product prices and a fixed 
+discount rate (e.g. 10%), loop through the prices 
+to build a new array of discounted prices.
+
+4. Counting Age Groups
+From an array of people’s ages, count how many 
+are minors (under 18) and how many are adults 
+(18 and over).
+
+5. High‑Spending Transactions
+Given an array of amounts , 
+find and collect all amounts above a 
+certain threshold (e.g. N1000) into a new array.
+
+6. Word Length Mapper
+Starting with an array of words, build a parallel 
+array of the corresponding word lengths.
+
+7 Find an Item’s Index
+Given your shopping list array and a target item, 
+loop to locate its index (or return –1 if not found).
+
+8. Reverse an Array In‑Place
+Without using the built‑in method, swap elements 
+in the array via a loop to reverse it manually.
+
+9. Duplicate Removal
+From an array that may contain duplicate entries 
+(e.g. attendee names), build a new array of 
+uniques by checking with a loop and using indexOf 
+to avoid repeats.
+
+10. Word‑Counting in a Sentence
+Split a sentence into words (using String.split), 
+then loop through the resulting array to count 
+how many words start with a vowel.
+
+
+*/
