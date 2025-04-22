@@ -58,3 +58,18 @@ console.log(discountedPrice)
 // From an array of people’s ages, count how many
 // are minors (under 18) and how many are adults
 // (18 and over).
+
+let Ages = [15, 11, 38, 45, 65, 12, 28, 23, 58, 69, 78]
+let minors = 0
+let adults = 0
+
+for (let i = 0; i < Ages.length; i++){
+    if (Ages[i] < 18) {
+        minors++
+    }
+    else if (Ages[i] >= 18) {
+        adults++
+    }
+}
+
+console.log('Minors: ' + minors + '  ' +  'Adults: ' + adults)
