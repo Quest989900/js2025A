@@ -73,3 +73,19 @@ for (let i = 0; i < Ages.length; i++){
 }
 
 console.log('Minors: ' + minors + '  ' +  'Adults: ' + adults)
+
+// 5. High‑Spending Transactions
+// Given an array of amounts , 
+// find and collect all amounts above a 
+// certain threshold (e.g. N1000) into a new array.
+
+
+let amounts = [2000, 400, 1200, 5000, 450]
+let highSpendings = []
+
+for (let i = 0; i < amounts.length; i++){
+    if (amounts[i] > 1000) {
+        highSpendings.push(amounts[i])
+    }
+}
+console.log(highSpendings)

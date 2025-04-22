@@ -75,7 +75,7 @@ console.log ("under 18 are" , under18)
 
 }
 
-// 5. High‑Spending Transactions
+// 5. High‑Spending Transactios
 // Given an array of amounts , 
 // find and collect all amounts above a 
 // certain threshold (e.g. N1000) into a new array.
