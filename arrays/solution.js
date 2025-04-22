@@ -26,14 +26,14 @@ console.log(lowestTemp)
 
 
 // QUESTION 3.
-let prices = [1000, 2000, 3000, 4000, 5000];
-let discountRate = 0.10; // 10% discount
+let prices = [1000, 2000, 3000, 4000, 5000]
+let discountRate = 0.10
 
-let discountedPrices = [];
+let discountedPrices = []
 
 for (let i = 0; i < prices.length; i++) {
-    let discountedPrice = prices[i] * (1 - discountRate);
-    discountedPrices.push(discountedPrice.toFixed(2));
+    let discountedPrice = prices[i] * (1 - discountRate)
+    discountedPrices.push(discountedPrice.toFixed(2))
 }
 
 
@@ -98,7 +98,7 @@ for (let i = 0; i < shoppingList.length; i++) {
 console.log("${targetItem}")
 
 // QUESTION 8.
-let array = [1, 2, 3, 4, 5];
+let array = [1, 2, 3, 4, 5]
 
 for (let i = 0; i < Math.floor(array.length / 2); i++) {
     let temp = array[i];
@@ -119,7 +119,7 @@ for (let i = 0; i < attendees.length; i++) {
     }
 }
 
-console.log("Unique attendees: ", uniqueAttendees)
+console.log(uniqueAttendees)
 
 
 // QUESTION 10.
