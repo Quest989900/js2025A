@@ -94,7 +94,12 @@ console.log(highSpendings)
 // Starting with an array of words, build a parallel 
 // array of the corresponding word lengths.
 
-
+let words = ['parrot', 'rabbit', 'horse', 'cheetah', 'panda']
+let wordsLength = []
+for (let i = 0; i < words.length; i++){
+    wordsLength.push(words[i].length)
+}
+console.log(wordsLength)
 
 // 7 Find an Item’s Index
 // Given your shopping list array and a target item, 
@@ -110,3 +115,35 @@ for (let i = 0; i < shoppingList.length; i++) {
     }
 }
     console.log( 'The targeted items index is ' + indexOfTargetedItem)
+
+//     8. Reverse an Array In‑Place
+// Without using the built‑in method, swap elements
+// in the array via a loop to reverse it manually.
+
+
+
+// 9. Duplicate Removal
+// From an array that may contain duplicate entries 
+// (e.g. attendee names), build a new array of 
+// uniques by checking with a loop and using indexOf 
+// to avoid repeats.
+
+let age= [1,1,2,2,3,4,4,5,6]
+ let newArray = []
+ let dup = []
+ 
+ for(let index = 0; index < age.length; index++){
+     if(newArray.includes(age.at(index))){
+         dup.push(age.at(index))
+     }
+     else{
+         newArray.push(age.at(index))
+     }
+    }
+     
+      console.log(newArray , dup)
+    
+//       10. Word‑Counting in a Sentence
+// Split a sentence into words (using String.split), 
+// then loop through the resulting array to count 
+// how many words start with a vowel.
