@@ -89,3 +89,24 @@ for (let i = 0; i < amounts.length; i++){
     }
 }
 console.log(highSpendings)
+
+// 6. Word Length Mapper
+// Starting with an array of words, build a parallel 
+// array of the corresponding word lengths.
+
+
+
+// 7 Find an Item’s Index
+// Given your shopping list array and a target item, 
+// loop to locate its index (or return –1 if not found).
+
+let shoppingList = ['chocolates', 'icecream', 'pineapples', 'yoghurts', 'juices']
+let targetedItem1 = 'icecream'
+let indexOfTargetedItem = 0
+
+for (let i = 0; i < shoppingList.length; i++) {
+    if (shoppingList[i] == targetedItem1) {
+        indexOfTargetedItem = shoppingList.indexOf(targetedItem1)
+    }
+}
+    console.log( 'The targeted items index is ' + indexOfTargetedItem)
