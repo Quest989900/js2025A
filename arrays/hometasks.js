@@ -38,3 +38,23 @@ for (let i = 0; i < temperature.length; i++){
 
 console.log( "Highest Temperature is " + highestTemperature + "°C" + "," + " " + "Lowest Temperature is " + lowestTemperature + "°C")
 
+// 3. Discounted Prices Generator
+// Given an array of product prices and a fixed
+// discount rate (e.g. 10%), loop through the prices
+// to build a new array of discounted prices.
+
+let productPrices = [20, 40, 100, 500, 30]
+let fixedDiscountRate = 0.10
+let discountedPrice = []
+
+for (let i = 0; i < productPrices.length; i++){
+ let discount = productPrices[i] - (productPrices[i] * fixedDiscountRate )
+discountedPrice.push(discount)
+}
+
+console.log(discountedPrice)
+
+// 4. Counting Age Groups
+// From an array of people’s ages, count how many
+// are minors (under 18) and how many are adults
+// (18 and over).
