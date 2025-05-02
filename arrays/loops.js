@@ -98,3 +98,30 @@ console.log(birds)
 // arr.find()
 // arr.sort()
 // arr.reduce
+
+
+
+//slice(startIndx, endIndx) method
+
+let transactions = [2500, 1000, 100, 200, 1500]
+// let sliced = transactions.slice(1)
+// let sliced = transactions.slice(1, 4)
+// let sliced = transactions.slice(1, 7)
+let transactionsCopy = transactions.slice()
+
+// console.log(transactions)
+// console.log(transactionsCopy)
+
+let transactions2 = [2500, 1000, 100, 200, 1500]
+//splice(start, howManyToRemove, items-to-add)
+// transactions2.splice(1,1)
+// transactions2.splice(1,2)
+// transactions2.splice(1,2, 7500, 550)
+// transactions2.splice(1,0, 3000)
+
+let spliced = transactions2.toSpliced(1,2)
+
+console.log(transactions2)
+console.log(spliced)
+ 
+
