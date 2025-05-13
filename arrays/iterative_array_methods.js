@@ -119,9 +119,260 @@ const sorter = (arr, order='asc')=>{
 
 let arr4 = [5,7,9]
 
-let reducedValue = arr4.reduce( (accumulator, currentValue, currentIndx,arr)=>{
-     return accumulator * currentValue
+let reducedValue = arr4.reduce( (accum, cv, currIndx, arr)=>{
+     return accum * cv
     //  return accumulator
 }, 1)
 
-console.log(reducedValue)
+// console.log(reducedValue)
+
+/*
+Given an array containing the 30 days in a month. 
+Write a code to add up the first ten days of the month, using
+the reduce array method.
+*/
+
+let month = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
+    21,22,23,24,25,26,27,28,29,30
+]
+
+let reducedMonth = month.reduce((acc, cv, ci, arr)=>{
+    if(ci <= 9) {
+        return acc + cv
+    }else{
+        return acc + 0
+    }
+},0)
+
+// console.log(reducedMonth)
+
+let reducedMonth_ = month.reduce((acc, cv,ci,arr)=>{
+    return arr.slice(0,10).reduce((acc,cv,ci,arr)=> acc + cv)
+})
+
+// console.log(reducedMonth_)
+
+
+
+
+
+
+
+let _reducedMonth = month.slice(0,10).reduce((acc,cv,ci,arr)=> acc + cv)
+
+// console.log(_reducedMonth)
+
+
+/*
+Given an array of integers nums and an integer target, 
+return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, 
+and you may not use the same element twice.
+
+You can return the answer in any order.
+
+ 
+ Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+Example 2:
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+
+Example 3:
+
+Input: nums = [3,3], target = 6
+Output: [0,1]
+*/
+
+const sumToTarget = (arr, target)=>{
+    let resArr = []
+    for(let i=0; i<arr.length; i++){
+        for(let j=1; j<arr.length; j++){
+            if((arr[i] + arr[j] === target) && j > i) {
+                resArr.push(i,j)
+            }else {
+                continue
+            }
+        }
+    }
+    return resArr
+}
+
+// console.log(sumToTarget([2,7,11,15], 9))
+// console.log(sumToTarget([3,2,4], 6))
+// console.log(sumToTarget([3,3], 6))
+// /*
+
+
+// Example 2:
+// Input: nums = [0,1,2,2,3,0,4,2], val = 2
+// Output: 5, nums = [0,1,4,0,3,_,_,_]
+// Explanation: Your function should return k = 5, 
+// with the first five elements of nums containing 0, 0, 1, 3, and 4.
+// Note that the five elements can be returned in any order.
+// It does not matter what you leave beyond the returned k 
+// (hence they are underscores).
+// */ 
+// Given an integer array, nums and an integer val, 
+// remove all occurrences of val in nums, in-place. 
+// The order of the elements may be changed. 
+// Then return the number of elements in nums which 
+// are not equal to val.
+
+// Example 1:
+// Input: nums = [3,2,2,3], val = 3
+// Output: 2, nums = [2,2,_,_]
+// Explanation: Your function should return k = 2, 
+// with the first two elements of nums being 2.
+// It does not matter what you leave beyond the 
+// returned k (hence they are underscores).
+
+const nums = [2, 8, 10, 2, 20, 2];
+const removeDup = function (arr, val) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == val) {
+      arr[i] = "_";
+    } else {
+      count++;
+      continue;
+    }
+  }
+  arr.sort();
+  return {0:2, num: arr}
+  
+
+};
+// console.log(removeDup([0,1,2,2,3,0,4,2], 2));
+
+/*
+Problem 3:
+Given a sorted array of distinct integers and a target value, 
+return the index if the target is found. If not, return the 
+index where it would be if it were inserted in order.
+
+Example 1:
+Input: nums = [1,3,5,6], target = 5
+Output: 2
+
+Example 2:
+Input: nums = [1,3,5,6], target = 2
+Output: 1
+
+Example 3:
+Input: nums = [1,3,5,6], target = 7
+Output: 4
+*/
+   
+const indexFunc = function(arr, tar){
+    if(arr.includes(tar)){
+        return arr.indexOf(tar)
+    }else {
+        arr.push(tar)
+        arr.sort((a,b) => a-b)
+    } 
+        return arr.indexOf(tar)
+    
+    
+}
+// console.log(indexFunc([1,3,5,6],5))
+// console.log(indexFunc([1,3,5,6],2))
+// console.log(indexFunc([1,3,5,6],7))
+
+const merge = function(num1,m,num2,n){
+    for(let i=0; i < (m+n); i++) {
+        if (num1[i] == 0) {
+            num1.pop()
+            i--
+         }      
+
+    }
+    console.log(num1)
+    return num1.concat(num2).sort()
+}
+
+// console.log(merge([1,2,3,0,0,0],3,[2,5,6],3))
+// console.log(merge([1],1,[],0))
+// console.log(merge([],0,[1],1))
+
+
+
+let num2 = [2,5,7]
+let count = 0
+
+// const addOne = function (sum){
+//     for(let i = sum.length - 1; i >= 0; i--) {
+//         sum[i] = 
+//     }
+// } 
+
+function plusOne (array) {
+    let resArr = []
+    let solution =+ array.join('') + 1
+    resArr.push(solution)
+    return resArr.toString().split('')
+}
+// console.log(plusOne([1,2,3]))
+// console.log(plusOne([19]))
+
+const addOne = (arry) => (Number(arry.join(""))+1).toString().split("")
+
+    // console.log(addOne([0]))
+
+
+const sumOne = (arry) => (Number(arry.join(""))+1).toString().split("").map(digit => Number(digit))
+
+// console.log(sumOne([9,9,9]))
+
+const process = function(arr1, m, arr2,n){
+    for(let i = arr1.length -1; i>= 0; i--){
+        if(!arr1[i]){
+            arr1[i] = arr2[i-m]
+        }
+    }
+    arr1.sort()
+    return arr1
+}
+// console.log(process([1,2,3,4,5,6,0,0,0], 6, [2,5,6],3 ));
+// console.log(process([1], 1, [], 0 ));
+// console.log(process([0], 0, [1],1 ));
+
+let prices = [1,42,3]
+let prices_ = prices.sort()
+console.log(prices);
+console.log(prices_);
+
+if(5 < undefined){
+    console.log('yes!');
+    
+}else{
+    console.log('no!');
+    
+}
+//=====================================
+let counter = 0
+    for(let i = 0; i < prices.length-1; i++){
+        if(prices[i] > prices[i+1] && prices[prices.length-1] < prices[prices.length-2]){
+            count++            
+        }
+    }
+    if (count == prices.length){
+        return 0
+    }
+
+    let profit = 0
+    for(let i = 0; i < prices.length; i++){
+        for(let j = i+1; j < prices.length; j++){
+            if(prices[j] - prices[i] > profit){
+                profit = prices[j] - prices[i]
+            }
+        }
+        
+    }
+
+    return profit
